@@ -1,1 +1,12 @@
+<style>
+  .download-link {
+    color: #008CBA; /* Change to desired color */
+    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+  }
 
+  .download-link:hover {
+    color: #005f73; /* Changes color when hovered */
+    text-decoration: underline;
+  }
+</style>

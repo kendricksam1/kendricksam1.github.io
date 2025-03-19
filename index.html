@@ -3,75 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header</title>
+    <title>Automotive Forensic Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    
+    <style>
+body {
+    font-family: "Inter", sans-serif;  /* Default font is Kanit */
+}
+
+/* Use Inter for specific sections if needed */
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+    </style>
+
+    
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Alpine.js for interactive menu -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
 
-<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+        <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <img class="w-auto h-6 sm:h-7" src="https://merakiui.com/images/full-logo.svg" alt="Logo">
+                </a>
 
-    <!-- Header Section -->
-    <header class="bg-blue-700 text-white p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Logo -->
-            <div class="text-2xl font-bold">
-                <a href="#">The Automotive Forensic Guide</a>
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
+                
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <!-- Navigation (Desktop) -->
-            <nav class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-blue-200">Home</a>
-                <a href="#about" class="hover:text-blue-200">About</a>
-                <a href="#services" class="hover:text-blue-200">Services</a>
-                <a href="#contact" class="hover:text-blue-200">Contact</a>
-            </nav>
-
-            <!-- Hamburger Menu (Mobile) -->
-            <div class="md:hidden flex items-center">
-                <button id="hamburger" class="text-2xl focus:outline-none">
-                    <span class="material-icons">menu</span>
-                </button>
+            <!-- Mobile Menu -->
+            <div :class="isOpen ? 'block' : 'hidden'" class="absolute inset-x-0 z-20 w-full px-6 py-4 bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:relative md:w-auto md:flex md:items-center">
+                <div class="flex flex-col md:flex-row md:mx-6">
+                    <a class="my-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 md:mx-4 md:my-0" href="#">Home</a>
+                    <a class="my-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 md:mx-4 md:my-0" href="#">Shop</a>
+                    <a class="my-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 md:mx-4 md:my-0" href="#">Contact</a>
+                    <a class="my-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 md:mx-4 md:my-0" href="#">About</a>
+                </div>
             </div>
         </div>
-        
-        <!-- Mobile Navigation (Hidden by Default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-500 text-white p-4">
-            <a href="#" class="block py-2">Home</a>
-            <a href="#about" class="block py-2">About</a>
-            <a href="#services" class="block py-2">Services</a>
-            <a href="#contact" class="block py-2">Contact</a>
-        </div>
-    </header>
+    </nav>
 
-    <!-- Extraction Section -->
-<section id="extraction" class="py-12 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Extraction</h2>
-        <p class="mb-6">Learn about our data extraction techniques and tools used to gather valuable information efficiently.</p>
-        <a href="/extraction.html" class="inline-block bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-colors duration-200">Learn More</a>
+<!-- Main Content -->
+<section class="py-10">
+    <div class="container max-w-7xl px-6 mx-auto">
+        <h1 class="text-3xl font-bold inter">
+            Your guide to Vehicle Forensics
+        </h1>
+        <p class="mt-2 text-gray-600 text-sm dark:text-gray-400">
+            How to extract and analyse valuable forensic data from vehicles.
+        </p>
+
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+            
+            <!-- Card 1 -->
+            <a href="introduction.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <!-- Insert Image here -->
+                    <img src="https://plus.unsplash.com/premium_photo-1677009541474-1fc2642943c1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    
+                    <!-- Card Content -->
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">Introduction to Vehicle Forensics</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Tools and techniques.</p>
+                </div>
+            </a>
+
+            <a href="case-studies.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1608095476825-d4e0f916372f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saWNlJTIwY2FyfGVufDB8fDB8fHww" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">Case Studies</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Real-life cases of vehicle forensics in action.</p>
+                </div>
+            </a>
+
+
+            <a href="satnav.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <img src=https://images.unsplash.com/photo-1603638725135-928baf863eff?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3BzfGVufDB8fDB8fHww" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">Sat Navs - data extraction and analysis</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Learn how to extract and analyse data from various SatNavs.</p>
+                </div>
+            </a>            
+
+            <!-- Card 4 -->
+            <a href="accident-analysis.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1608095476825-d4e0f916372f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saWNlJTIwY2FyfGVufDB8fDB8fHww" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">Accident Analysis</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Learn how forensic methods determine accident causes.</p>
+                </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="data-extraction.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1608095476825-d4e0f916372f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saWNlJTIwY2FyfGVufDB8fDB8fHww" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">Data Extraction</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Explore how vehicle data is retrieved for forensic use.</p>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="future-of-forensics.html" class="block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1608095476825-d4e0f916372f?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9saWNlJTIwY2FyfGVufDB8fDB8fHww" alt="Introduction Image" class="w-full h-64 object-cover rounded-lg dark:bg-gray-600">
+                    <h2 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">The Future of Vehicle Forensics</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">Discover emerging trends and technologies.</p>
+                </div>
+            </a>
+
+        </div>
     </div>
 </section>
 
-<!-- Analysis Section -->
-<section id="analysis" class="py-12 px-4 bg-gray-200">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Analysis</h2>
-        <p class="mb-6">Deep dive into how we analyze data to uncover insights and provide actionable intelligence.</p>
-        <a href="/analysis.html" class="inline-block bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition-colors duration-200">Learn More</a>
-    </div>
-</section>
 
-<script src="js/main.js"></script>
-
-
-    <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
 
 </body>
+
+<footer class="bg-white dark:bg-gray-800 text-center py-6 mt-10 shadow-inner">
+    <p class="text-gray-600 dark:text-gray-400 text-sm">Samuel Kendrick 2025. Final Year Project.</p>
+</footer>
 </html>

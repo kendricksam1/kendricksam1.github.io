@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Automotive Forensic Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html">
+                <img class="h-7" src="https://merakiui.com/images/full-logo.svg" alt="Logo">
+            </a>
+            <div>
+                <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 mt-4 text-sm text-gray-600 dark:text-gray-400">
+        <a href="index.html" class="hover:underline">Home</a> > <span class="text-gray-500">Introduction</span>
+    </div>
+
+    <!-- Content Section -->
+    <section class="py-10">
+        <div class="container max-w-4xl mx-auto px-6">
+            <h1 class="text-4xl font-bold text-gray-900 dark:text-white" style="font-family: 'Inter', sans-serif;">
+                A forensic guide to Satellite Navigation and GPS Untis
+            </h1>
+            <p class="mt-4 text-gray-600 text-lg dark:text-gray-300">
+                This section will highlight the data that can be gathered from Sat-Nav units.
+            </p>
+
+            <!-- Divider -->
+            <hr class="my-6 border-gray-300 dark:border-gray-700">
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">The importance of Sat-Nav units in a forensic investigation relating to vehicles.</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Sat Nav and GPS units can be a vital source of data for forensic investigators, as they contain a range of different user location data, often with timestamps. Below we highlgight some of the data available from these units.         </p>
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Data that can be recovered.</h2>
+            <ul class="mt-2 space-y-2 text-gray-600 dark:text-gray-400">
+                <li>✅ Home addresses</li>
+                <li>✅ Recent and favourite locations</li>
+                <li>✅ Contacts and call registers (for some models)</li>
+                <li>✅ Route history</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">The goal of extracting data out of Sat-Navs.</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                The aim behind extracting and analysing Sat-Nav data is to allow investigators to reconstruct the travel history of a suspect or a victim. This data can provide a valuable insight into where someone has been, information that may not be available otherwise.
+            </p>
+
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Extraction.</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Now that you have an overview, proceed to the next section to explore advanced forensic tools in detail.
+            </p>
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Setup</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+         Before we move on to the analysis stage of the process, we need to make sure we have what we need.
+         Firstly, you should make sure that you have installed FTK Imager. If you haven't, you can download it 
+             <a href="introduction.html" class="text-blue-600 dark:text-blue-400 hover:underline">here</a>.
+        </p>
+
+        <p class="mt-2 text-gray-600 dark:text-gray-400">
+            We will also need three image files of various types of SatNavs: TomTom, RoadAngel, and NavMan F20.
+        </p>
+        <a href="https://drive.google.com/file/d/1ojqtQJAHu-hCJnAIl9zyscWsYXur8GAy/view?usp=sharing"
+           class="mt-4 inline-block px-4 py-2 text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
+            Download SatNav Image Files
+        </a>
+        
+
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Analysis</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Now that you have an overview, proceed to the next section to explore advanced forensic tools in detail.
+            </p>
+
+
+            
+
+            <a href="advanced-tools.html" class="inline-block mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition">
+                Continue to Advanced Tools →
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 text-center py-6 mt-10 shadow-inner">
+        <p class="text-gray-600 dark:text-gray-400 text-sm">Samuel Kendrick 2025. Final Year Project.</p>
+    </footer>
+
+</body>
+</html>
