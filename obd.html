@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBD Forensics - Automotive Forensic Guide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-wide text-blue-600 dark:text-blue-400">
+                Vehicle Forensics Guide
+            </a>
+            <div>
+                <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 mt-4 text-sm text-gray-900 dark:text-gray-400">
+        <a href="index.html" class="hover:underline">Home</a> > <span class="text-gray-500 dark:text-gray-300">OBD Forensics</span>
+    </div>
+
+    <!-- Content Section -->
+    <section class="py-10">
+        <div class="container max-w-4xl mx-auto px-6">
+            <!-- Heading -->
+            <h1 class="text-4xl font-bold text-gray-300 dark:text-gray-300" style="font-family: 'Inter', sans-serif;">
+                On-Board Diagnostics (OBD) Forensics
+            </h1>
+            <!-- Paragraph -->
+            <p class="mt-4 text-gray-900 dark:text-gray-300 text-lg">
+                
+            </p>
+
+            <!-- Divider -->
+            <hr class="my-6 border-gray-300 dark:border-gray-700">
+
+            <!-- Case Study: Accident Investigation Using OBD -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">
+                What is OBD and why is it important?
+            </h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                On-Board Diagnostics refers to a collection of system data that is stored about a vehicle, often used for monitoring the health of an engine and identifying issues that may be occurring.
+                This data can provide valuable insights when investigating a range of different scenarios. We will discuss some of these below:
+            </p>
+            
+            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-700 dark:text-gray-300">
+                <li><span class="font-semibold text-gray-900 dark:text-white">Accident Investigation:</span> OBD information can help to piece together the a situation before a crash occured</li>
+                <li><span class="font-semibold text-gray-900 dark:text-white">Fraud Investigations:</span> OBD data can help to differentiate staged accidents. </li>
+                <li><span class="font-semibold text-gray-900 dark:text-white">Vehicle Theft Analysis:</span> Logs unauthorized access attempts or key reprogramming.</li>
+                <li><span class="font-semibold text-gray-900 dark:text-white">Mechanical Failure Diagnosis:</span> Identifies engine faults or brake failures.</li>
+            </ul>
+
+            <!-- Image Section -->
+            <div class="mt-6 text-center">
+                <img src="https://projectremaps.co.uk/wp-content/uploads/2022/03/On-Board-Diagnostics-Auto-992x794.jpg"
+                     alt="OBD data extraction for accident investigation" 
+                     class="max-w-lg mx-auto rounded-lg shadow-lg">
+                <p class="text-sm text-gray-500 mt-2">
+                    Image Source: <a href="https://projectremaps.co.uk/on-board-diagnostics/" class="text-blue-500 hover:underline">Project Remaps</a>
+                </p>
+            </div>
+
+            <!-- Case Study: Vehicle Theft Detection -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">2009-2011 Toyota Acceleration Recalls</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                In the late 2010s, Toyota were forced to recall approximately 7.5million vehicles after reports that vehicles were unintendingly acceleratoring. Initially, Toyota believed the problem was
+                 solely down to floor mats that hid slid forward, and caused the accelerator pedal to become stuck. Whilst this was correct, and led to over 5 million vehicles being recalled,
+                  they had a different issue on their hands. <br> <br>
+
+                    On the 28th of August, 2009, in San Diego California, a passenger of a Toyota Lexus sedan rang 911 and stated that they were acceleratoring uncontrollably.
+                     This resulted in them crashing, and all four occupants of the vehicle died. Upon inspection of the vehicle, it was found that the floor mats had been stored in the boot,
+                      in the advice of Toyota. This meant they had a new problem. Investigators of the crash used OBD data to confirm that the vehicle had been acceleratoring fully, but also braking.
+                       This confirmed to them that there was a problem with the accelerator pedal. Unexpectedly, a team from NASA investigated the so called "sticky pedal" problem,
+                        but found no software issues. During investigations, it was found that this problem had led to 90 deaths. In the worst case scenario, when a pedal
+                        is pushed to a specific settings, it stays at that level of power even if the driver removes their foot from the pedal.<br><br>
+
+                        Toyota were taken to court, and resulted in paying over $1.2 for allegedly concealing information about flawed pedals, the largest penalty imposed on an automaker
+                         from the US Justice Department at the time.
+            </p>
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">OBD Extraction</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Now that you understand OBD forensics, proceed to the next section to explore the extraction and analysis of digital data from vehicle ECUs.
+            </p>
+
+            <!-- Next Steps -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Next Steps</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Now that you understand OBD forensics, proceed to the next section to explore the extraction and analysis of digital data from vehicle ECUs.
+            </p>
+
+            <a href="ecu-analysis.html" class="inline-block mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                Continue to ECU Analysis →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 text-center py-6 mt-10 shadow-inner">
+        <p class="text-gray-900 dark:text-gray-300 text-sm">Samuel Kendrick 2025. Final Year Project.</p>
+    </footer>
+
+</body>
+</html>
