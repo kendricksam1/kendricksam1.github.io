@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAN Bus Forensics - Automotive Data Analysis</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kanit:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold tracking-wide text-blue-600 dark:text-blue-400">
+                Vehicle Forensics Guide
+            </a>
+            <div>
+                <a href="index.html" class="text-gray-700 dark:text-gray-200 hover:text-blue-500">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 mt-4 text-sm text-gray-900 dark:text-gray-400">
+        <a href="index.html" class="hover:underline">Home</a> > <span class="text-gray-500 dark:text-gray-300">CAN Bus Forensics</span>
+    </div>
+
+    <!-- Content Section -->
+    <section class="py-10">
+        <div class="container max-w-4xl mx-auto px-6">
+            <!-- Heading -->
+            <h1 class="text-4xl font-bold text-gray-300 dark:text-gray-300" style="font-family: 'Inter', sans-serif;">
+                CAN Bus Data & Vehicle Forensics
+            </h1>
+            
+            <!-- Introduction -->
+            <p class="mt-4 text-gray-900 dark:text-gray-300 text-lg">
+                Understanding CAN bus data is essential for vehicle forensics, diagnostics, and security investigations.
+            </p>
+
+            <!-- Divider -->
+            <hr class="my-6 border-gray-300 dark:border-gray-700">
+
+            <!-- What is CAN Bus? -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">
+                What is CAN Bus?
+            </h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                The Controller Area Network (CAN) is a communication protocol used in modern vehicles for real-time data exchange between different electronic control units (ECUs).
+                The CAN Bus network shares similarities with OBD data. Both types of data are accessed through the OBD port, described in the previous section, however CAN data provides a much more in depth insight into the state of a vehicle,
+                and provides investigators with data such as individual wheel speeds, brake pressure, steering angle, and a range of other data that OBD won't show.
+
+                <br><br>
+
+                Although CAN data provides us with a more in depth picture, this also comes with it's own challenges. Firstly, the CAN network requires specialised
+                 tools to access data such as CANEdge or SavvyCAN. Another challenge is that CAN data is not standardised and therefore not human readable, like OBD data is, which means that investigators must use Database CAN (DBC) files in order to decode the raw data stream.
+                  Another challenge with CAN data is that the CAN bus network transmits thousands of messages per second, the majority of which are not relevant to a forensic investigation, therefore these messages must be filtered in order to extract the relevant information.
+                   
+            </p>
+
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">
+                The history of CAN bus.
+            </h2>        
+ 
+            <!-- Image Placeholder -->
+            <div class="mt-6 text-center">
+                <img src="https://www.csselectronics.com/cdn/shop/files/can-bus-history-timeline-controller-area-network.svg?v=1633690040" alt="CAN Bus Data Visualization" class="max-w-lg mx-auto rounded-lg shadow-lg">
+                <p class="text-sm text-gray-500 mt-2">
+                    Image Source: <a href="https://www.csselectronics.com/cdn/shop/files/can-bus-history-timeline-controller-area-network.svg?v=1633690040" class="text-blue-500 hover:underline">CSS Electronics</a>
+                </p>
+            </div>
+
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                In the above image we can see the history of the CAN Bus network, with it's inital development from Bosch in the late 90's, to the beginning of the development of CAN XL in 2018
+                   
+            </p>
+
+            <!-- Data Extraction & Analysis -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">
+                Extracting & Analyzing CAN Bus Data
+            </h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                 
+            </p>
+
+            <!-- Video Demonstration -->
+            <div class="relative w-full pb-[56.25%] h-0 mt-6">
+                <iframe class="absolute top-0 left-0 w-full h-full" 
+                    src="https://www.youtube.com/embed/example" 
+                    title="CAN Bus Data Analysis" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Next Steps -->
+            <h2 class="text-2xl font-semibold mt-6 text-gray-900 dark:text-white">Next Steps</h2>
+            <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Explore more forensic techniques in the next section.
+            </p>
+            <a href="next-section.html" class="inline-block mt-6 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+                Continue to Next Section →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 text-center py-6 mt-10 shadow-inner">
+        <p class="text-gray-900 dark:text-gray-300 text-sm">Your Name 2025. Final Year Project.</p>
+    </footer>
+
+</body>
+</html>
